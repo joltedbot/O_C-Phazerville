@@ -92,6 +92,8 @@ public:
 
   static float Read_ID_Voltage();
 
+  ~ADC();
+
 private:
 
   template <ADC_CHANNEL channel>

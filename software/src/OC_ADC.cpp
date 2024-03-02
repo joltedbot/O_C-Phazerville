@@ -632,4 +632,11 @@ FLASHMEM float ADC::Read_ID_Voltage() { return 0; }
 }
 #endif
 
+#if defined(__MK20DX256__)
+ADC::~ADC() {  
+  delete(dma0);
+  delete(dma1);
+}
+#endif
+
 }; // namespace OC
